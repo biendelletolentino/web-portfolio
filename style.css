@@ -1,0 +1,194 @@
+/* General Styles & Typography */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #fafafa;
+        }
+        
+        .text-primary-custom {
+            color: #89CFF0 !important;
+        }
+        
+        .bg-primary-custom {
+            background-color: #89CFF0 !important;
+        }
+
+        /* Navbar */
+        .navbar-nav .nav-link {
+            color: #555;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: #89CFF0;
+            border-bottom: 2px solid #89CFF0;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background-color: #89CFF0;
+            color: white;
+            border: 2px solid #89CFF0;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: transparent;
+            color: #89CFF0;
+        }
+        .btn-outline-custom {
+            background-color: transparent;
+            color: #89CFF0;
+            border: 2px solid #89CFF0;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-custom:hover {
+            background-color: #89CFF0;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background-color: #fafafa;
+        }
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 300;
+            color: #111;
+            margin-bottom: 20px;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #555;
+        }
+        .hero-text {
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        /* Hero Image Blob Shape */
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .blob-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #89CFF0;
+            /* Creates the organic shape */
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            z-index: 1;
+        }
+        .image-wrapper img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: auto;
+            border-radius: 20px; /* Optional fallback */
+            /* Add mask to clip image to blob if preferred, or leave as PNG with transparent background */
+        }
+
+        /* Section Headings */
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: #a8b2ff;
+            bottom: -10px;
+            left: 25%;
+        }
+
+        /* Timeline (Experience & Education) */
+        .timeline-header {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .timeline-header i {
+            color: #89CFF0;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .timeline-item {
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-year {
+            width: 35%;
+            padding-right: 20px;
+            font-weight: 500;
+            color: #666;
+            text-align: right;
+            border-right: 2px solid #f0f0f0;
+        }
+        .timeline-content {
+            width: 65%;
+            padding-left: 30px;
+        }
+        .timeline-content h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        .timeline-content p {
+            color: #777;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #eaeaea;
+            padding: 40px 0;
+            margin-top: 60px;
+            background-color: #fff;
+        }
+        .footer-heading {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .footer-text {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .social-icons a {
+            color: #333;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: #89CFF0;
+        }
