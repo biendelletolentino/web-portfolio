@@ -11,12 +11,12 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-<!-- 
-    <style>
-        
-    </style> -->
+
+    
 </head>
 <body>
+
+    <div id="pageContent">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
@@ -33,7 +33,7 @@
                         <a class="nav-link" href="objective.html">My Objective</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="skills.html">Skills</a>
+                        <a class="nav-link" href="background.html">Background</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Services</a>
@@ -50,9 +50,9 @@
                     <p class="hero-subtitle mb-2">Hello!</p>
                     <h1 class="hero-title">I'm Biendelle</h1>
                     <p class="hero-text">
-                        Aspiring Information System Graduatee Seeking A Web Developer Role.
+                        Aspiring Information System Graduatee Seeking A Web Developer and IT Support Role.
                     </p>
-                    <a href="#contact" class="btn btn-custom">Get in touch</a>
+                    <button class="btn btn-custom" id="openContact">Get in touch</button>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
                     <div class="image-wrapper">
@@ -63,10 +63,6 @@
             </div>
         </div>
     </section>
-
-   
-
-    
 
     <footer>
         <div class="container">
@@ -82,8 +78,8 @@
                 <div class="col-md-2 mb-4 mb-md-0">
                     <h6 class="footer-heading">Follow Me</h6>
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/biendz.11"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/whiitwhiit11"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-3 text-md-end text-muted" style="font-size: 0.85rem;">
@@ -93,15 +89,83 @@
         </div>
     </footer>
 
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-overlay" id="contactOverlay">
+        <div class="contact-modal">
+            <button class="contact-modal-close" id="closeContact">&times;</button>
+            <h5>Get in Touch</h5>
+            <p>Choose how you'd like to reach me</p>
+            <div class="contact-icons">
+
+                <a class="contact-icon-link"
+                   href="https://mail.google.com/mail/?view=cm&to=biendelletolentino@gmail.com"
+                   target="_blank" rel="noopener">
+                    <div class="contact-icon-circle gmail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="contact-icon-label">Gmail</span>
+                </a>
+
+                <a class="contact-icon-link"
+                   href="https://ig.me/whiitwhiit11"
+                   target="_blank" rel="noopener">
+                    <div class="contact-icon-circle instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <span class="contact-icon-label">Instagram</span>
+                </a>
+
+                <a class="contact-icon-link"
+                   href="https://m.me/biendz.11"
+                   target="_blank" rel="noopener">
+                    <div class="contact-icon-circle messenger">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                    </div>
+                    <span class="contact-icon-label">Messenger</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
         AOS.init({
-            once: true, // whether animation should happen only once - while scrolling down
-            offset: 100 // offset (in px) from the original trigger point
+            once: true,
+            offset: 100
+        });
+
+        const overlay = document.getElementById('contactOverlay');
+        const pageContent = document.getElementById('pageContent');
+
+        // function openContactModal() {
+        //     overlay.classList.add('active');
+        //     pageContent.classList.add('blurred');
+        // }
+
+        // function closeContactModal() {
+        //     overlay.classList.remove('active');
+        //     pageContent.classList.remove('blurred');
+        // }
+
+        document.getElementById('openContact').addEventListener('click', () => {
+            overlay.classList.add('active');
+            pageContent.classList.add('blurred');
+        });
+        document.getElementById('closeContact').addEventListener('click', () => {
+            overlay.classList.remove('active');
+            pageContent.classList.remove('blurred');
+        });
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) 
+            overlay.classList.remove('active');
+            pageContent.classList.remove('blurred');
         });
     </script>
+
 </body>
 </html>

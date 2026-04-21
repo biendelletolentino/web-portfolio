@@ -1,4 +1,3 @@
-/* General Styles & Typography */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
@@ -40,8 +39,8 @@
             transition: all 0.3s ease;
         }
         .btn-custom:hover {
-            background-color: transparent;
-            color: #89CFF0;
+            background-color: #56c1f3;
+            color: #ffffff;
         }
         .btn-outline-custom {
             background-color: transparent;
@@ -94,7 +93,6 @@
             width: 100%;
             height: 100%;
             background-color: #89CFF0;
-            /* Creates the organic shape */
             border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
             z-index: 1;
         }
@@ -103,8 +101,8 @@
             z-index: 2;
             width: 100%;
             height: auto;
-            border-radius: 20px; /* Optional fallback */
-            /* Add mask to clip image to blob if preferred, or leave as PNG with transparent background */
+            border-radius: 20px; 
+
         }
 
         /* Section Headings */
@@ -167,6 +165,65 @@
             margin: 0;
         }
 
+               /* ── Skills Section ── */
+        .skills-section {
+            padding: 60px 0 40px;
+        }
+        .skill-category-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .skill-card {
+            background-color: #fff;
+            border: 1px solid #f0f0f0;
+            border-radius: 10px;
+            padding: 22px 18px;
+            height: 100%;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .skill-card:hover {
+            box-shadow: 0 6px 22px rgba(137, 207, 240, 0.20);
+            transform: translateY(-3px);
+        }
+        .skill-card-icon {
+            font-size: 1.5rem;
+            color: #89CFF0;
+            margin-bottom: 10px;
+        }
+        .skill-card h6 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 14px;
+        }
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #eef9fe;
+            color: #777;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin: 3px 2px;
+            white-space: nowrap;
+        }
+        .tech-badge img {
+            width: 14px;
+            height: 14px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        .tech-badge i {
+            font-size: 11px;
+            color: #89CFF0;
+        }
+
         /* Footer */
         footer {
             border-top: 1px solid #eaeaea;
@@ -191,4 +248,115 @@
         }
         .social-icons a:hover {
             color: #89CFF0;
+        }
+
+                /* ── Contact Modal ── */
+        .contact-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #pageContent {
+            transition: filter 0.25s ease;
+        }
+        #pageContent.blurred {
+            filter: blur(12px);
+        }
+
+        .contact-overlay.active {
+            display: flex;
+        }
+        .contact-modal {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px 32px 28px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            animation: popIn 0.25s ease;
+        }
+        @keyframes popIn {
+            from { 
+                transform: scale(0.92); 
+                opacity: 0; 
+            }
+            to   { 
+                transform: scale(1);    
+                opacity: 1; 
+            }
+        }
+        .contact-modal h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 6px;
+        }
+        .contact-modal p {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 28px;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .contact-icon-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+        .contact-icon-link:hover {
+            transform: translateY(-4px);
+        }
+        .contact-icon-circle {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .contact-icon-circle.gmail{ 
+            background: #fde8e8; 
+            color: #EA4335; 
+        }
+        .contact-icon-circle.instagram{ 
+            background: #fce8f5; 
+            color: #E1306C; 
+        }
+        .contact-icon-circle.messenger{ 
+            background: #e8f0fe; 
+            color: #0084FF; 
+        }
+        .contact-icon-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #666;
+        }
+        .contact-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: #aaa;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        .contact-modal-close:hover { 
+            color: #555; 
         }
