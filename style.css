@@ -1,4 +1,4 @@
-        body {
+body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             overflow-x: hidden;
@@ -101,26 +101,25 @@
             z-index: 2;
             width: 100%;
             height: auto;
-            border-radius: 20px; 
-
+            border-radius: 20px;
         }
 
-        /* Section Headings */
+        /* ── Section Headings ── */
         .section-heading {
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 20px;
             position: relative;
-            display: inline-block;
+            display: block;
+            text-align: center;
         }
         .section-heading::after {
             content: '';
-            position: absolute;
-            width: 50%;
+            display: block;
+            width: 50px;
             height: 2px;
-            background-color: #a8b2ff;
-            bottom: -10px;
-            left: 25%;
+            background-color: #89CFF0;
+            margin: 10px auto 0;
         }
 
         /* Timeline (Experience & Education) */
@@ -165,7 +164,7 @@
             margin: 0;
         }
 
-               /* ── Skills Section ── */
+        /* ── Skills Section ── */
         .skills-section {
             padding: 60px 0 40px;
         }
@@ -224,6 +223,117 @@
             color: #89CFF0;
         }
 
+        /* ── Projects Page ── */
+        .project-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin-bottom: 3.5rem;
+        }
+        .project-row.reverse {
+            flex-direction: row-reverse;
+        }
+        .project-info {
+            flex: 1;
+            padding-top: 0.5rem;
+        }
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.8rem;
+        }
+        .project-header i {
+            color: #89CFF0;
+            font-size: 1.1rem;
+        }
+        .project-header span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #333;
+        }
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: #1a1a2e;
+        }
+        .project-description {
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0.9rem;
+        }
+        .project-links {
+            margin-top: 0.9rem;
+            display: flex;
+            gap: 0.6rem;
+        }
+        .btn-proj {
+            font-size: 0.78rem;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: all 0.2s;
+        }
+        .btn-proj-primary {
+            background: #89CFF0;
+            color: #fff;
+            border: none;
+        }
+        .btn-proj-primary:hover {
+            background: #56c1f3;
+            color: #fff;
+        }
+        .btn-proj-outline {
+            background: transparent;
+            color: #89CFF0;
+            border: 1.5px solid #89CFF0;
+        }
+        .btn-proj-outline:hover {
+            background: #89CFF0;
+            color: #fff;
+        }
+        .project-image-wrap {
+            flex: 1.2;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #e8f6fd;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .project-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .img-placeholder {
+            color: #89CFF0;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-align: center;
+        }
+        .img-placeholder i {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 6px;
+            opacity: 0.5;
+        }
+        .projects-divider {
+            border: none;
+            border-top: 1.5px solid #e8eaf0;
+            margin: 3rem 0;
+        }
+
         /* Footer */
         footer {
             border-top: 1px solid #eaeaea;
@@ -250,8 +360,8 @@
             color: #89CFF0;
         }
 
-                /* ── Contact Modal ── */
-        .contact-overlay {
+        /* ── Contact Modal ── */
+        /* .contact-overlay {
             display: none;
             position: fixed;
             inset: 0;
@@ -260,14 +370,12 @@
             align-items: center;
             justify-content: center;
         }
-        
         #pageContent {
             transition: filter 0.25s ease;
         }
         #pageContent.blurred {
             filter: blur(12px);
         }
-
         .contact-overlay.active {
             display: flex;
         }
@@ -283,14 +391,8 @@
             animation: popIn 0.25s ease;
         }
         @keyframes popIn {
-            from { 
-                transform: scale(0.92); 
-                opacity: 0; 
-            }
-            to   { 
-                transform: scale(1);    
-                opacity: 1; 
-            }
+            from { transform: scale(0.92); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
         }
         .contact-modal h5 {
             font-size: 1.1rem;
@@ -328,18 +430,9 @@
             justify-content: center;
             font-size: 1.5rem;
         }
-        .contact-icon-circle.gmail{ 
-            background: #fde8e8; 
-            color: #EA4335; 
-        }
-        .contact-icon-circle.instagram{ 
-            background: #fce8f5; 
-            color: #E1306C; 
-        }
-        .contact-icon-circle.messenger{ 
-            background: #e8f0fe; 
-            color: #0084FF; 
-        }
+        .contact-icon-circle.gmail     { background: #fde8e8; color: #EA4335; }
+        .contact-icon-circle.instagram { background: #fce8f5; color: #E1306C; }
+        .contact-icon-circle.messenger { background: #e8f0fe; color: #0084FF; }
         .contact-icon-label {
             font-size: 0.72rem;
             font-weight: 600;
@@ -357,6 +450,42 @@
             line-height: 1;
             transition: color 0.2s;
         }
-        .contact-modal-close:hover { 
-            color: #555; 
+        .contact-modal-close:hover { color: #555; } */
+
+        /* ── Responsive / Mobile ── */
+        @media (max-width: 767px) {
+            .project-row,
+            .project-row.reverse {
+                flex-direction: column;
+            }
+            .project-image-wrap {
+                width: 100%;
+                min-height: 180px;
+                margin: 0 auto 1.5rem;
+            }
+            .img-placeholder {
+                text-align: center;
+            }
+            .project-image-wrap img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        /* ── Project Date ── */
+        .project-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #aaa;
+            margin-left: auto;
+        }
+        .project-date i {
+            font-size: 0.7rem;
+            color: #89CFF0;
         }
